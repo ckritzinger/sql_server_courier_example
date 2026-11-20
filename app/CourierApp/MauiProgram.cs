@@ -1,3 +1,4 @@
+using CourierApp.Data;
 using CourierApp.Services;
 using CourierApp.ViewModels;
 using CourierApp.Views;
@@ -13,6 +14,8 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<DriverIdentity>();
         builder.Services.AddSingleton<ApiClient>();
+        builder.Services.AddSingleton<CourierConnector>();
+        builder.Services.AddSingleton<Database>();
 
         builder.Services.AddTransient<StopsViewModel>();
         builder.Services.AddTransient<StopsPage>();
